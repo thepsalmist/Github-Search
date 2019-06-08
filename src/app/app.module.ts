@@ -5,6 +5,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { HomeComponent } from './home/home.component';
 // import { GitsearchComponent } from './gitsearch/gitsearch.component';
 // import { ProfileComponent } from './profile/profile.component';
@@ -14,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    PageNotFoundComponent,
     routingComponents
     // HomeComponent,
     // GitsearchComponent,
