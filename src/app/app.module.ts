@@ -15,8 +15,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent,
-    routingComponents
+    routingComponents,
+    PageNotFoundComponent
     // HomeComponent,
     // GitsearchComponent,
     // ProfileComponent
