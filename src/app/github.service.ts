@@ -28,7 +28,26 @@ export class GithubService {
     }
     let promise = new Promise((resolve, reject) => {
       this.http.get<IUser>(environment.apiUrl)
+        .toPromise()
+        .then(data => {
+          this.user.avatar_url = data.avatar_url
+          this.user.created_at = data.created_at
+          this.user.email = data.email
+          this.user.followers = data.followers
+          this.user.following = data.following
+          this.user.location = data.location
+          this.user.login = data.login
+          this.user.public_repo = data.public_repo
+
+          resolve()
+        },
+          error => {
+
+            reject(error)
+          }
+        )
     })
+    return promise;
   }
 
 }
