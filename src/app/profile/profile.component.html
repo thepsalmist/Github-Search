@@ -1,7 +1,14 @@
 <body id="searchPage">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-centred">
+      <div class="col-lg-4 col-md-6">
+        <div class="">
+          <p>
+            <span class="badge badge-secondary">{{user.public_repos}}Public Repos</span>
+            <span class="badge badge-success">{{user.followers}}Followers</span>
+            <span class="badge badge-warning">{{user.following}}Following</span>
+          </p>
+        </div>
         <div class="card card-cascade">
           <!--Card image-->
           <div class="view view-cascade overlay">
@@ -15,13 +22,20 @@
           Card Content -->
           <div class="card-body card-body-cascade text-center">
             <h4 class="card title"><strong>{{user.name}}</strong></h4>
-            <h5></h5>
+            <h5>{{user.location}}</h5>
           </div>
         </div>
-
       </div>
-
+      <div class="col-lg-6 col-md-6">
+        <div class="card card-cascade">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Bio</strong> <br>{{user.bio}}</li>
+            <li class="list-group-item">{{user.bio}}</li>
+            <li class="list-group-item">{{user.bio}}</li>
+            <li class="list-group-item">{{user.bio}}</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
   </div>
 </body>

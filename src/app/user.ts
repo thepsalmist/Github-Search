@@ -3,7 +3,7 @@ export class User {
     public login: string,
     public location: any,
     public avatar_url: any,
-    public public_repo: string,
+    public public_repos: string,
     public followers: string,
     public following: string,
     public email: string,

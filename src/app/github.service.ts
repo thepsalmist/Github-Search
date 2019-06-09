@@ -17,6 +17,7 @@ export class GithubService {
   getUserProfile() {
 
     interface IUser {
+      public_repos: string;
       login: string,
       location: any,
       avatar_url: any,
@@ -37,7 +38,7 @@ export class GithubService {
           this.user.following = data.following
           this.user.location = data.location
           this.user.login = data.login
-          this.user.public_repo = data.public_repo
+          this.user.public_repos = data.public_repos
 
           resolve()
         },
