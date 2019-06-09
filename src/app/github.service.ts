@@ -11,10 +11,12 @@ import { IRepo } from './repos';
   providedIn: 'root'
 })
 export class GithubService {
+
   user: User;
   repos: any
 
   private _url: string = 'https://api.github.com/users/thepsalmist/repos'
+  username: string;
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', '', '', '', '', '')
@@ -62,4 +64,8 @@ export class GithubService {
   getUserRepo(): Observable<IRepo[]> {
     return this.http.get<IRepo[]>(this._url)
   }
+  newProfile(username: string) {
+    this.username = username
+  }
+
 }

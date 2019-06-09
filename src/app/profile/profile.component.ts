@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GithubService } from '../github.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-profile',
@@ -14,7 +15,7 @@ export class ProfileComponent implements OnInit {
   constructor(private http: HttpClient, private _githubService: GithubService) { }
 
   ngOnInit() {
-    this.http.get('https://api.github.com/users/thepsalmist').subscribe(data => {
+    this.http.get(environment.apiUrl).subscribe(data => {
       this.user = data;
       console.log(data);
       console.log("stiletos on mastard")
@@ -23,9 +24,7 @@ export class ProfileComponent implements OnInit {
       this.repos = repos;
       console.log(repos)
       console.log("repos on a roll")
-    }
-
-    )
+    })
   }
 
 }
