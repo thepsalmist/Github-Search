@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GithubService } from './github.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 // import { HomeComponent } from './home/home.component';
 // import { GitsearchComponent } from './gitsearch/gitsearch.component';
 // import { ProfileComponent } from './profile/profile.component';
@@ -25,8 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule,
-    HttpClientModule
+
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]

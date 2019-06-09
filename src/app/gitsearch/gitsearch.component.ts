@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { GithubService } from '../github.service';
 
 @Component({
@@ -17,10 +16,8 @@ export class GitsearchComponent implements OnInit {
 
   newUserProfile() {
     this._githubService.newProfile(this.username);
-  }
 
-  ngOnInit() {
-    this.http.get(environment.apiUrl).subscribe(data => {
+    this.http.get('https://api.github.com/users/' + this.username).subscribe(data => {
       this.user = data
       console.log(data);
       console.log('working here!')
@@ -32,5 +29,7 @@ export class GitsearchComponent implements OnInit {
     })
 
   }
+
+  ngOnInit() { }
 
 }

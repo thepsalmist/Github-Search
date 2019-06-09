@@ -19,13 +19,13 @@ export class GithubService {
   username: string;
 
   constructor(private http: HttpClient) {
-    this.user = new User('', '', '', '', '', '', '', '', '')
+    this.user = new User(1, '', '', '', '', '', '', '', '')
   }
 
   getUserProfile() {
 
     interface IUser {
-      public_repos: string;
+      public_repos: number;
       login: string,
       location: any,
       avatar_url: any,
@@ -65,7 +65,7 @@ export class GithubService {
     return this.http.get<IRepo[]>(this._url)
   }
   newProfile(username: string) {
-    this.username = username
+    this.username = username;
   }
 
 }
