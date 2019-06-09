@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubService } from '../github.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  user: any;
 
-  constructor() { }
+  constructor(private _githubService: GithubService) { }
 
   ngOnInit() {
+    this.user = this._githubService.getUserProfile();
   }
 
 }
