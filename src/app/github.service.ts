@@ -10,8 +10,10 @@ import { environment } from 'src/environments/environment';
 })
 export class GithubService {
   user: User;
+  repository: any;
+
   constructor(private http: HttpClient) {
-    this.user = new User('', '', '', '', '', '', '', '')
+    this.user = new User('', '', '', '', '', '', '', '', '')
   }
 
   getUserProfile() {
@@ -25,7 +27,8 @@ export class GithubService {
       followers: string,
       following: string,
       email: string,
-      created_at: any
+      created_at: any,
+      html_url: any
     }
     let promise = new Promise((resolve, reject) => {
       this.http.get<IUser>(environment.apiUrl)
@@ -39,6 +42,7 @@ export class GithubService {
           this.user.location = data.location
           this.user.login = data.login
           this.user.public_repos = data.public_repos
+          this.user.html_url = data.html_url
 
           resolve()
         },
@@ -51,4 +55,7 @@ export class GithubService {
     return promise;
   }
 
+  getUserRepo() {
+
+  }
 }

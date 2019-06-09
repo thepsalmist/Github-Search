@@ -23,16 +23,21 @@
           <div class="card-body card-body-cascade text-center">
             <h4 class="card title"><strong>{{user.name}}</strong></h4>
             <h5>{{user.location}}</h5>
+            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success">View Profile on Github</a></p>
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
         <div class="card card-cascade">
           <ul class="list-group">
-            <li class="list-group-item"><strong>Bio</strong> <br>{{user.bio}}</li>
-            <li class="list-group-item">{{user.bio}}</li>
-            <li class="list-group-item">{{user.bio}}</li>
-            <li class="list-group-item">{{user.bio}}</li>
+            <li class="list-group-item"><strong>Username:</strong><br>{{user.login}}</li>
+            <li class="list-group-item"><strong>Bio:</strong><br>{{user.bio}}</li>
+            <li class="list-group-item"><strong>Email:</strong><br>{{user.email}}</li>
+            <li class="list-group-item"></li>
+          </ul>
+          <hr>
+          <ul class="list-group">
+            <h3>Repositories</h3>
           </ul>
         </div>
       </div>

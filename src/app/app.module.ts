@@ -7,7 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GithubService } from './github.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ReposComponent } from './repos/repos.component'
 // import { HomeComponent } from './home/home.component';
 // import { GitsearchComponent } from './gitsearch/gitsearch.component';
 // import { ProfileComponent } from './profile/profile.component';
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     FooterComponent,
     routingComponents,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ReposComponent
     // HomeComponent,
     // GitsearchComponent,
     // ProfileComponent

@@ -7,6 +7,10 @@ span {
   margin: 1px;
 }
 
+hr {
+  background-color: #086918;
+}
+
 /*
 .col-centred {
   float: none;

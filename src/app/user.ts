@@ -7,7 +7,8 @@ export class User {
     public followers: string,
     public following: string,
     public email: string,
-    public created_at: any
+    public created_at: any,
+    public html_url: any
 
   ) { }
 }
