@@ -3,3 +3,6 @@ export class Repos {
 
   }
 }
+export interface IRepo {
+  repo: string
+}

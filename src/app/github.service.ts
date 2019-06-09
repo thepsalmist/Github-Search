@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs/internal/Observable';
+import { IRepo } from './repos';
 
 
 
@@ -10,7 +12,9 @@ import { environment } from 'src/environments/environment';
 })
 export class GithubService {
   user: User;
-  repository: any;
+  repos: any
+
+  private _url: string = 'https://api.github.com/users/thepsalmist'
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', '', '', '', '', '')
@@ -30,6 +34,7 @@ export class GithubService {
       created_at: any,
       html_url: any
     }
+
     let promise = new Promise((resolve, reject) => {
       this.http.get<IUser>(environment.apiUrl)
         .toPromise()
@@ -55,7 +60,7 @@ export class GithubService {
     return promise;
   }
 
-  getUserRepo() {
-
+  getUserRepo(): Observable<IRepo[]> {
+    return this.http.get<IRepo[]>(this._url)
   }
 }
