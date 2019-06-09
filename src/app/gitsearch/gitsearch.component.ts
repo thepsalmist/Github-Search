@@ -22,7 +22,7 @@ export class GitsearchComponent implements OnInit {
       console.log(data);
       console.log('working here!')
     })
-    this._githubService.getUserRepo().subscribe(repos => {
+    this.http.get('https://api.github.com/users/' + this.username + '/repos').subscribe(repos => {
       this.repos = repos;
       console.log(repos)
       console.log("repos on a roll")
