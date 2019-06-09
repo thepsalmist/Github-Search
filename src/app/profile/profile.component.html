@@ -36,9 +36,15 @@
             <li class="list-group-item"></li>
           </ul>
           <hr>
-          <ul class="list-group">
+          <div class="card card-cascade">
             <h3>Repositories</h3>
-          </ul>
+            <div class="card-body card-body-cascade text-centre" *ngFor="let repo of repos">
+              <h4>{{repo.name}}</h4>
+              <p>
+                {{repo.description}}<br><a href="{{repo.html_url}}">View on Github</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

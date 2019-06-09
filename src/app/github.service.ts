@@ -14,7 +14,7 @@ export class GithubService {
   user: User;
   repos: any
 
-  private _url: string = 'https://api.github.com/users/thepsalmist'
+  private _url: string = 'https://api.github.com/users/thepsalmist/repos'
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', '', '', '', '', '')
@@ -27,7 +27,6 @@ export class GithubService {
       login: string,
       location: any,
       avatar_url: any,
-      public_repo: string,
       followers: string,
       following: string,
       email: string,

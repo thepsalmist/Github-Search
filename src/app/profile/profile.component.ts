@@ -19,9 +19,9 @@ export class ProfileComponent implements OnInit {
       console.log(data);
       console.log("stiletos on mastard")
     })
-    this._githubService.getUserRepo().subscribe(data => {
-      this.repos = data;
-      console.log(data)
+    this._githubService.getUserRepo().subscribe(repos => {
+      this.repos = repos;
+      console.log(repos)
       console.log("repos on a roll")
     }
 
