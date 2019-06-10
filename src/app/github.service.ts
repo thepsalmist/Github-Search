@@ -14,7 +14,7 @@ export class GithubService {
   user: User;
   repos: any
 
-  private _url: string = 'https://api.github.com/users/thepsalmist/repos'
+  private _url: string = "https://api.github.com/users/thepsalmist/repos?access_token=" + "08cde142ae5594b2de84ebb863a8a9fba96d4a7a"
   username: string;
 
   constructor(private http: HttpClient) {
