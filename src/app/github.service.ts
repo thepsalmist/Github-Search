@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs/internal/Observable';
 import { IRepo } from './repos';
 
@@ -37,7 +36,7 @@ export class GithubService {
     }
 
     let promise = new Promise((resolve, reject) => {
-      this.http.get<IUser>(environment.apiUrl)
+      this.http.get<IUser>("https://api.github.com/users/thepsalmist?access_token=" + "08cde142ae5594b2de84ebb863a8a9fba96d4a7a")
         .toPromise()
         .then(data => {
           this.user.avatar_url = data.avatar_url

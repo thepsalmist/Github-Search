@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   //apiKey: '08cde142ae5594b2de84ebb863a8a9fba96d4a7a',
-  apiUrl: "https://api.github.com/users/thepsalmist?access_token=" + "08cde142ae5594b2de84ebb863a8a9fba96d4a7a"
+  //apiUrl: "https://api.github.com/users/thepsalmist?access_token=" + "08cde142ae5594b2de84ebb863a8a9fba96d4a7a"
 };
 
 /*
