@@ -8,7 +8,7 @@ import { GithubService } from '../github.service';
   styleUrls: ['./gitsearch.component.css']
 })
 export class GitsearchComponent implements OnInit {
-  user: Object;
+  user: any;
   repos: any
   username: string;
 

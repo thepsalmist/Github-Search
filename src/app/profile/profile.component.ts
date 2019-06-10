@@ -8,7 +8,7 @@ import { GithubService } from '../github.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  user: Object;
+  user: any;
   repos: any = [];
 
   constructor(private http: HttpClient, private _githubService: GithubService) { }
